@@ -1,0 +1,68 @@
+.dashboard {
+  width: 87%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.privateHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.privateHeader p {
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.mainView {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0.5rem;
+  margin-left: 0.7rem;
+}
+
+.filmContainer {
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.filmContainer img {
+  width: 23rem;
+  height: 13rem;
+  border-radius: 8px;
+}
+
+.filmContainer .text {
+  padding: 1rem;
+  background: #f9fafd33;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filmContainer .text .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 80%;
+}
+
+.filmContainer .text .name p {
+    margin-left: 1rem;
+}
+
+.filmContainer .text img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.filmContainer .text img:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}

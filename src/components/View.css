@@ -1,0 +1,37 @@
+.View {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 3rem;
+  border: 2px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.grid,
+.list,
+.grid-selected,
+.list-selected {
+  padding: 0.5rem;
+}
+
+.grid,
+.grid-selected {
+  margin-right: 2px solid #fff;
+}
+
+.list,
+.list-selected {
+  margin-left: 2px solid #fff;
+}
+
+.View span {
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+}
+
+.grid-selected, .list-selected {
+  background-color: rgba(255, 255, 255, 0.7);
+}
