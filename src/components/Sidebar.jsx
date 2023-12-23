@@ -7,16 +7,13 @@ import StarWarsContext from "../StarWarsContext";
 
 export default function Sidebar() {
   const [selected, setSelected] = useState("");
-  const {displayData, setDisplayData} = useContext(StarWarsContext);
+  const {displayData, setDisplayData, setCategory} = useContext(StarWarsContext);
   useEffect(()=>{
-    console.log(selected);
-    fetchData(selected, setDisplayData)
+    fetchData(selected, setDisplayData);
+    setCategory(selected);
   }, [selected]);
-  useEffect(()=>{
-    console.log(displayData);
-  }, [displayData])
   return <div className="sidebar">
-    <CategoriesContext.Provider value={{setSelected}}>
+    <CategoriesContext.Provider value={{setSelected, selected}}>
     <Categories name="Films"/>
     <Categories name="People"/>
     <Categories name="Planets"/>
