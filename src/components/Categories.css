@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.category-selected {
+  background-color: palevioletred;
+  border-radius: 8px;
+}
+
 .category p {
   margin-left: 1rem;
   font-size: 1.2rem;
