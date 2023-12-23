@@ -7,9 +7,9 @@ import StarWarsContext from "../StarWarsContext";
 
 export default function Sidebar() {
   const [selected, setSelected] = useState("");
-  const {displayData, setDisplayData, setCategory} = useContext(StarWarsContext);
+  const {displayData, setDisplayData, setCategory, setLoader} = useContext(StarWarsContext);
   useEffect(()=>{
-    fetchData(selected, setDisplayData);
+    fetchData(selected, setDisplayData, setLoader);
     setCategory(selected);
   }, [selected]);
   return <div className="sidebar">
@@ -25,11 +25,13 @@ export default function Sidebar() {
 }
 
 
-const fetchData = (selected, setData) => {
+const fetchData = (selected, setData, setLoader) => {
   (async ()=>{
     try {
+      setLoader(true);
       const data = await fetch(selected);
       setData(data);
+      setLoader(false);
     }
     catch(e) {
       console.log(e)

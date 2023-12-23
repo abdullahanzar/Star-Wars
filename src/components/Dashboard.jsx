@@ -5,10 +5,11 @@ import { films, placeholderAddress } from "../API";
 import movieIcon from "../assets/movieIcon.png";
 import optionsButton from "../assets/optionsButton.png";
 import StarWarsContext from "../StarWarsContext";
-import starWarsHome from "../assets/Star-Wars-Home.png"
+import starWarsHome from "../assets/Star-Wars-Home.png";
 
 export default function Dashboard(props) {
-  const { displayData, category, setSlider } = useContext(StarWarsContext);
+  const { displayData, category, setSlider, loader } =
+    useContext(StarWarsContext);
   const [Placeholders, setPlaceholders] = useState("");
   const [view, setView] = useState("");
   useEffect(() => {
@@ -35,7 +36,11 @@ export default function Dashboard(props) {
         </div>
       )}
       {!category && Welcome(starWarsHome)}
-      {!displayData && category && <span class="loader"></span>}
+      {loader && (
+        <div className="overlayDash">
+          <span class="loader"></span>
+        </div>
+      )}
     </div>
   );
 }
