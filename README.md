@@ -39,7 +39,7 @@ Welcome to the ReactJS Star Wars Dashboard project! This project aims to create 
 ### Design:
 
 - Micro-interactions and hovers for enhanced user experience.
-- Utilizes placeholder images from [picsum.photos](https://picsum.photos/) or allows users to add their own images.
+- Utilizes placeholder images from [picsum.photos](https://picsum.photos/)..
 
 ### API:
 
