@@ -2,7 +2,7 @@
 
 ## Introduction
 
-Welcome to the ReactJS Star Wars Dashboard project! This project aims to create a responsive and visually appealing dashboard where users can explore information about different content types in the Star Wars universe. The dashboard includes categories such as Films, People, Planets, Species, Starships, and Vehicles.
+Welcome to the ReactJS Star Wars Dashboard project! This project aims to create a visually appealing dashboard where users can explore information about different content types in the Star Wars universe. The dashboard includes categories such as Films, People, Planets, Species, Starships, and Vehicles.
 
 ## Dashboard Overview
 
@@ -39,7 +39,7 @@ Welcome to the ReactJS Star Wars Dashboard project! This project aims to create 
 ### Design:
 
 - Micro-interactions and hovers for enhanced user experience.
-- Utilizes placeholder images from [picsum.photos](https://picsum.photos/)..
+- Utilizes placeholder images from [picsum.photos](https://picsum.photos/).
 
 ### API:
 
@@ -48,4 +48,4 @@ Welcome to the ReactJS Star Wars Dashboard project! This project aims to create 
 ### Issues:
 
 - API response from Swapi may be slow / unresponsive at times. 
-- Although the project is responsive, it hasn't been tested on a large array of devices, certain devices may face unresponsive design.
+- Views on some tabs / smartphones may be unresponsive. Landscape mode is recommended if the view becomes unresponsive.
