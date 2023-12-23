@@ -5,7 +5,7 @@ import { films, placeholderAddress } from "../API";
 import movieIcon from "../assets/movieIcon.png";
 import optionsButton from "../assets/optionsButton.png";
 import StarWarsContext from "../StarWarsContext";
-import Slider from "./Slider";
+import starWarsHome from "../assets/Star-Wars-Home.png"
 
 export default function Dashboard(props) {
   const { displayData, category, setSlider } = useContext(StarWarsContext);
@@ -20,18 +20,21 @@ export default function Dashboard(props) {
   return (
     <div className="dashboard">
       {category && privateHeader(category, setView)}
-      <div className="mainView">
-        {view == "Grid" &&
-          displayData != undefined &&
-          displayData.map((item, key) =>
-            fillGridContainers({ Placeholders, item, key, setSlider })
-          )}
-        {view == "List" &&
-          displayData != undefined &&
-          displayData.map((item, key) =>
-            fillListContainers({ Placeholders, item, key, setSlider })
-          )}
-      </div>
+      {category && (
+        <div className="mainView">
+          {view == "Grid" &&
+            displayData != undefined &&
+            displayData.map((item, key) =>
+              fillGridContainers({ Placeholders, item, key, setSlider })
+            )}
+          {view == "List" &&
+            displayData != undefined &&
+            displayData.map((item, key) =>
+              fillListContainers({ Placeholders, item, key, setSlider })
+            )}
+        </div>
+      )}
+      {!category && Welcome(starWarsHome)}
       {!displayData && category && <span class="loader"></span>}
     </div>
   );
@@ -81,3 +84,17 @@ const fillListContainers = (props) => {
     </div>
   );
 };
+
+function Welcome(starWarsHome) {
+  return (
+    <div className="welcome">
+      <img src={starWarsHome} alt="" />
+      <p>Welcome to Star Wars Dashboard</p>
+      <p>
+        Star Wars is an American epic space opera multimedia franchise created
+        by George Lucas, which began with the eponymous 1977 film and quickly
+        became a worldwide pop culture phenomenon.
+      </p>
+    </div>
+  );
+}

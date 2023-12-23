@@ -17,9 +17,10 @@
   margin-left: 1rem;
   font-size: 1.2rem;
   font-weight: 400;
+  width: 60%;
 }
 
 .category img:nth-of-type(2) {
-  position: absolute;
+  position: relative;
   left: 11%;
 }

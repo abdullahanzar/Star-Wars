@@ -128,3 +128,40 @@
     opacity: 0;
   }
 }
+
+.welcome {
+  width: 60%;
+  min-height: 60%;
+  border-radius: 12px;
+  background-color: #fff;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.welcome img {
+  width: 98%;
+  height: 70%;
+  padding: 2%;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.welcome p {
+  color: #000;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.welcome p:first-of-type {
+  width: 45%;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.welcome p:nth-of-type(2) {
+  color: #0000009f;
+}
