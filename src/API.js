@@ -4,7 +4,6 @@ const films = async () => {
   let allfilms;
   try {
     allfilms = await axios.get("https://swapi.dev/api/films/");
-    console.log(allfilms?.data?.results);
   } catch (E) {
     console.log(E);
   }
@@ -37,7 +36,6 @@ const people = async () => {
   let allpeople;
   try {
     allpeople = await axios.get("https://swapi.dev/api/people/");
-    console.log(allpeople?.data?.results);
   } catch (E) {
     console.log(E);
   }
@@ -49,7 +47,6 @@ const plantes = async () => {
   let allplanets;
   try {
     allplanets = await axios.get("https://swapi.dev/api/planets/");
-    console.log(allplanets?.data?.results);
   } catch (E) {
     console.log(E);
   }
@@ -62,7 +59,6 @@ const species = async () => {
   let allspecies;
   try {
     allspecies = await axios.get("https://swapi.dev/api/species/");
-    console.log(allspecies?.data?.results);
   } catch (E) {
     console.log(E);
   }
@@ -74,7 +70,6 @@ const fetch = async (item) => {
   let allitems;
   try {
     allitems = await axios.get(`https://swapi.dev/api/${item}/`);
-    console.log(allitems?.data?.results);
   } catch (E) {
     console.log(E);
   }

@@ -8,6 +8,11 @@
   align-items: center;
 }
 
+.category:hover {
+  background-color: rgba(230, 163, 174, 0.647);
+  border-radius: 8px;
+}
+
 .category-selected {
   background-color: palevioletred;
   border-radius: 8px;
